@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sign Up | Brand Items</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .register-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.55)
+                ),
+                url("images/panjabi.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .register-box {
+            width: 100%;
+            max-width: 480px;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.25);
+            box-sizing: border-box;
+        }
+
+        .register-logo {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .register-logo span {
+            color: #b28a45;
+        }
+
+        .register-subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 28px;
+        }
+
+        .register-form label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        .register-form input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            font-size: 15px;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .register-form input:focus {
+            border-color: #b28a45;
+        }
+
+        .register-submit {
+            width: 100%;
+            padding: 13px;
+            background: #171717;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .register-submit:hover {
+            background: #b28a45;
+        }
+
+        .register-message {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 22px;
+            color: #666;
+        }
+
+        .login-link a {
+            color: #b28a45;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 18px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        @media (max-width: 500px) {
+            .register-box {
+                padding: 28px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        🚚 সারা বাংলাদেশে ডেলিভারি |
+        💳 Cash on Delivery
+    </div>
+
+    <main class="register-page">
+
+        <div class="register-box">
+
+            <div class="register-logo">
+                <span>BRAND</span> ITEMS
+            </div>
+
+            <p class="register-subtitle">
+                নতুন অ্যাকাউন্ট তৈরি করুন
+            </p>
+
+            <form
+                class="register-form"
+                id="registerForm"
+            >
+
+                <label for="registerName">
+                    আপনার নাম
+                </label>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="আপনার পুরো নাম"
+                    required
+                >
+
+                <label for="registerPhone">
+                    মোবাইল নম্বর
+                </label>
+
+                <input
+                    type="tel"
+                    id="registerPhone"
+                    placeholder="01XXXXXXXXX"
+                    required
+                >
+
+                <label for="registerEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="আপনার Email"
+                    required
+                >
+
+                <label for="registerPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="কমপক্ষে ৬ অক্ষর"
+                    minlength="6"
+                    required
+                >
+
+                <label for="confirmPassword">
+                    Password আবার লিখুন
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Password আবার লিখুন"
+                    minlength="6"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="register-submit"
+                >
+                    Sign Up
+                </button>
+
+            </form>
+
+            <div
+                id="registerMessage"
+                class="register-message"
+            ></div>
+
+            <div class="login-link">
+                আগে থেকেই অ্যাকাউন্ট আছে?
+                <a href="login.html">
+                    Login করুন
+                </a>
+            </div>
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+                ← ওয়েবসাইটে ফিরে যান
+            </a>
+
+        </div>
+
+    </main>
+
+    <script
+        type="module"
+        src="auth.js"
+    ></script>
+
+</body>
+</html>

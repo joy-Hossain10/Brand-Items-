@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brand Items | Fashion Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        🚚 সারা বাংলাদেশে ডেলিভারি | 💳 Cash on Delivery
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <span>BRAND</span> ITEMS
+        </div>
+
+        <nav class="nav">
+            <a href="#home">হোম</a>
+            <a href="#men">পুরুষ</a>
+            <a href="#women">নারী</a>
+            <a href="#kids">শিশু</a>
+            <a href="#new">নতুন কালেকশন</a>
+            <a href="#contact">যোগাযোগ</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <div id="authArea">
+
+    <a
+        href="login.html"
+        class="login-btn"
+    >
+        Login
+    </a>
+
+</div>
+
+            <button class="cart-btn" onclick="openCart()">
+                🛒 Cart
+                <span id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                BRAND ITEMS FASHION
+            </p>
+
+            <h1>
+                আপনার স্টাইল,<br>
+                আপনার পরিচয়
+            </h1>
+
+            <p>
+                ট্রেন্ডি ও মানসম্মত জামা-কাপড়ের নতুন কালেকশন
+                এখন এক জায়গায়।
+            </p>
+
+            <a href="#products" class="hero-btn">
+                এখনই শপ করুন →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+
+        <div class="section-title">
+            <p>SHOP BY CATEGORY</p>
+            <h2>আপনার পছন্দের ক্যাটাগরি</h2>
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card" onclick="filterProducts('পুরুষ')">
+                <div class="category-icon">👔</div>
+                <h3>পুরুষ</h3>
+                <p>Men's Collection</p>
+            </div>
+
+            <div class="category-card" onclick="filterProducts('নারী')">
+                <div class="category-icon">👗</div>
+                <h3>নারী</h3>
+                <p>Women's Collection</p>
+            </div>
+
+            <div class="category-card" onclick="filterProducts('শিশু')">
+                <div class="category-icon">🧒</div>
+                <h3>শিশু</h3>
+                <p>Kids Collection</p>
+            </div>
+
+            <div class="category-card" onclick="filterProducts('অ্যাক্সেসরিজ')">
+                <div class="category-icon">👜</div>
+                <h3>অ্যাক্সেসরিজ</h3>
+                <p>Fashion Accessories</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="products-section" id="products">
+
+        <div class="section-title">
+
+            <p>OUR COLLECTION</p>
+
+            <h2>জনপ্রিয় পণ্য</h2>
+
+        </div>
+
+  
+        
+        <!-- FILTER -->
+        <div class="filters">
+
+            <button onclick="filterProducts('সব')" class="filter active">
+                সব
+            </button>
+
+            <button onclick="filterProducts('পুরুষ')" class="filter">
+                পুরুষ
+            </button>
+
+            <button onclick="filterProducts('নারী')" class="filter">
+                নারী
+            </button>
+
+            <button onclick="filterProducts('শিশু')" class="filter">
+                শিশু
+            </button>
+
+            <button onclick="filterProducts('অ্যাক্সেসরিজ')" class="filter">
+                অ্যাক্সেসরিজ
+            </button>
+
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div id="productGrid" class="product-grid">
+           
+        </div>
+        
+
+    </section>
+
+
+    <!-- PROMO -->
+    <section class="promo">
+
+        <div>
+
+            <p>LIMITED OFFER</p>
+
+            <h2>
+                নতুন কালেকশনে বিশেষ অফার
+            </h2>
+
+            <p>
+                পছন্দের পোশাক অর্ডার করুন আজই।
+            </p>
+
+            <a href="#products">
+                Shop Now →
+            </a>
+
+        </div>
+   
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <div class="feature">
+            <span>🚚</span>
+            <h3>দ্রুত ডেলিভারি</h3>
+            <p>সারা বাংলাদেশে ডেলিভারি</p>
+        </div>
+
+        <div class="feature">
+            <span>💳</span>
+            <h3>Cash on Delivery</h3>
+            <p>পণ্য হাতে পেয়ে পেমেন্ট</p>
+        </div>
+
+        <div class="feature">
+            <span>⭐</span>
+            <h3>মানসম্মত পণ্য</h3>
+            <p>বাছাই করা কালেকশন</p>
+        </div>
+
+        <div class="feature">
+            <span>🔄</span>
+            <h3>সহজ রিটার্ন</h3>
+            <p>সহজ রিটার্ন সুবিধা</p>
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about">
+
+        <div class="about-text">
+
+            <p class="small-title">
+                ABOUT BRAND ITEMS
+            </p>
+
+            <h2>
+                ফ্যাশন হোক আপনার নিজের মতো
+            </h2>
+
+            <p>
+                Brand Items একটি আধুনিক ফ্যাশন শপ,
+                যেখানে পুরুষ, নারী ও শিশুদের জন্য
+                বিভিন্ন ধরনের পোশাক ও ফ্যাশন আইটেম পাওয়া যাবে।
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <p>CONTACT US</p>
+
+            <h2>আমাদের সাথে যোগাযোগ করুন</h2>
+
+        </div>
+
+        <div class="contact-box">
+
+            <p>📞 ফোন: 01338685291</p>
+
+            <p>📧 Email: hossainjoy775@gamil.com</p>
+
+            <p>📍 বাংলাদেশ</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            BRAND ITEMS
+        </div>
+
+        <p>
+            © 2026 Brand Items. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- CART MODAL -->
+    <div id="cartModal" class="modal">
+
+        <div class="modal-box">
+
+            <button class="close" onclick="closeCart()">
+                ×
+            </button>
+
+            <h2>আপনার Cart</h2>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-total">
+                মোট: ৳ <span id="cartTotal">0</span>
+            </div>
+
+            <button class="checkout-btn" onclick="checkout()">
+                Order করুন
+            </button>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="firebase.js"></script>
+<script src="app.js"></script>
+
+    <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBWCjzqC86X8f7HFf-yCrhiLpoZMROWSlE",
+        authDomain: "brand-items.firebaseapp.com",
+        projectId: "brand-items",
+        storageBucket: "brand-items.firebasestorage.app",
+        messagingSenderId: "705695809822",
+        appId: "1:705695809822:web:e0469e2a5bac2a4458890f",
+        measurementId: "G-084SH06PFR"
+    };
+
+    const app = initializeApp(firebaseConfig);
+
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+
+    window.firebaseApp = app;
+    window.firebaseDB = db;
+    window.firebaseAuth = auth;
+
+    console.log("Brand Items Firebase Connected!");
+</script>
+
+<script type="module" src="app.js"></script>
+    
+    <script type="module" src="header-auth.js"></script>
+
+</body>
+</html>
+
+</body>
+</html>

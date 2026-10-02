@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile - Brand Items</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: #f7f5f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .profile-page {
+            min-height: 100vh;
+            padding: 30px 15px 60px;
+        }
+
+        .profile-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .profile-title h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .profile-title p {
+            color: #777;
+        }
+
+        .profile-card {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 10px 35px rgba(0,0,0,.08);
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #b28a45;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 45px;
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-btn {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 9px 15px;
+            background: #b28a45;
+            color: white;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #photoInput {
+            display: none;
+        }
+
+        #profileName {
+            margin: 10px 0 25px;
+            font-size: 26px;
+        }
+
+        .profile-info {
+            text-align: left;
+        }
+
+        .profile-info > div {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .profile-info span {
+            display: block;
+            color: #777;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .profile-info strong {
+            display: block;
+            word-break: break-word;
+        }
+
+        .logout-btn {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #171717;
+            color: white;
+            cursor: pointer;
+        }
+
+        .back-btn {
+            display: block;
+            margin-top: 15px;
+            color: #b28a45;
+            text-decoration: none;
+        }
+
+        .orders-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .my-order {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 14px;
+            border: 1px solid #eee;
+        }
+
+        .my-order-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .order-status-badge {
+            background: #b28a45;
+            color: white;
+            padding: 6px 11px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .my-order-product {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            margin-top: 12px;
+        }
+
+        .my-order-product img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .my-order-total {
+            text-align: right;
+            margin-top: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .no-orders {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .profile-card {
+                padding: 22px;
+            }
+
+            .profile-avatar {
+                width: 95px;
+                height: 95px;
+            }
+
+            .my-order-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="profile-page">
+
+    <div class="profile-title">
+        <h1>My Profile</h1>
+        <p>Brand Items Account</p>
+    </div>
+
+
+    <div class="profile-card">
+
+        <!-- Profile Photo -->
+        <div class="profile-avatar" id="profileAvatar">
+            👤
+        </div>
+
+        <!-- Photo Upload -->
+     
+
+<label for="photoInput" class="photo-btn">
+    📷 ছবি পরিবর্তন করুন
+</label>
+
+<input
+    type="file"
+    id="photoInput"
+    accept="image/*"
+>
+
+
+        <!-- Name -->
+        <h2 id="profileName">
+            Loading...
+        </h2>
+
+
+        <div class="profile-info">
+
+            <div>
+                <span>📱 Phone</span>
+                <strong id="profilePhone">
+                    Loading...
+                </strong>
+            </div>
+
+            <div>
+                <span>📧 Email</span>
+                <strong id="profileEmail">
+                    Loading...
+                </strong>
+            </div>
+
+            <div>
+                <span>🆔 User ID</span>
+                <strong id="profileUid">
+                    Loading...
+                </strong>
+            </div>
+
+        </div>
+
+
+        <button
+            onclick="logoutUser()"
+            class="logout-btn">
+            Logout
+        </button>
+
+
+        <a
+            href="index.html"
+            class="back-btn">
+            ← Website-এ ফিরে যান
+        </a>
+
+    </div>
+
+
+    <!-- Orders -->
+
+    <div class="orders-section">
+
+        <h2>📦 My Orders</h2>
+
+        <div id="myOrders">
+            Orders loading...
+        </div>
+
+    </div>
+
+</main>
+
+
+<script type="module" src="auth.js"></script>
+<script type="module" src="profile.js"></script>
+
+</body>
+</html>

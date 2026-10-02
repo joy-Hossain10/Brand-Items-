@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Items - Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    
+<header class="admin-header">
+
+    <h1>BRAND ITEMS</h1>
+
+    <div>
+        <a href="orders.html">
+            📦 Orders
+        </a>
+
+        <a href="index.html">
+            Website দেখুন
+        </a>
+    </div>
+
+</header>
+
+<main class="admin-container">
+
+    <div class="admin-title">
+        <h2>Product Add করুন</h2>
+        <p>নতুন Product যোগ করতে নিচের তথ্যগুলো দিন।</p>
+    </div>
+
+    <form id="productForm" class="product-form">
+
+        <label>Product Name</label>
+        <input
+            type="text"
+            id="productName"
+            placeholder="যেমন: Premium Panjabi"
+            required
+        >
+
+        <label>Category</label>
+        <select id="productCategory" required>
+            <option value="">Category নির্বাচন করুন</option>
+            <option value="পুরুষ">পুরুষ</option>
+            <option value="নারী">নারী</option>
+            <option value="শিশু">শিশু</option>
+            <option value="অ্যাক্সেসরিজ">অ্যাক্সেসরিজ</option>
+        </select>
+
+        <label>Price (৳)</label>
+        <input
+            type="number"
+            id="productPrice"
+            placeholder="যেমন: 1290"
+            min="0"
+            required
+        >
+
+        <label>Product Image</label>
+
+<input
+    type="file"
+    id="productImage"
+    accept="image/*"
+    required
+>
+
+<img
+    id="imagePreview"
+    src=""
+    alt="Image Preview"
+    style="
+        display:none;
+        width:180px;
+        height:180px;
+        object-fit:cover;
+        margin-top:15px;
+        border-radius:10px;
+    "
+>
+
+        <label>Description</label>
+        <textarea
+            id="productDescription"
+            placeholder="Product সম্পর্কে লিখুন"
+            rows="4"
+        ></textarea>
+
+        <label>Stock</label>
+        <input
+            type="number"
+            id="productStock"
+            placeholder="যেমন: 10"
+            min="0"
+            value="10"
+            required
+        >
+
+        <button type="submit">
+            + Product Add করুন
+        </button>
+
+        <p id="adminMessage"></p>
+
+    </form>
+
+    <section class="admin-products">
+
+        <h2>বর্তমান Products</h2>
+
+        <div id="adminProductList"></div>
+
+    </section>
+
+</main>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+</html>
